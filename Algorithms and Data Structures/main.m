@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#include "General.h"
-
 int main(int argc, const char * argv[]) {
-	float array[] = {1,2.5,3};
-	printArray_float(array, 3);
     return 0;
 }
 

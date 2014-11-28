@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE213095D31EF08308B509E1 /* SortAlgorithms.c in Sources */ = {isa = PBXBuildFile; fileRef = BE213408492A5CE05F789F73 /* SortAlgorithms.c */; };
-		BE21354C18018841B96D677A /* General.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE213B4F6BDEA389BB85C864 /* General.cpp */; };
 		BE213778B4DDD09C65663426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213965BA50A6E44053AA68 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BE21319430CBDD9820616CE5 /* TemplatesMacroses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatesMacroses.h; sourceTree = "<group>"; };
 		BE2132AD352B895EDCB4B428 /* Algorithms and Data Structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Algorithms and Data Structures"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE213408492A5CE05F789F73 /* SortAlgorithms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SortAlgorithms.c; sourceTree = "<group>"; };
-		BE21389F463BABE40D69F7E4 /* General.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
 		BE213965BA50A6E44053AA68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE213B4F6BDEA389BB85C864 /* General.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = General.cpp; sourceTree = "<group>"; };
-		BE213D23FE171C97329691C3 /* SortAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortAlgorithms.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				BE213965BA50A6E44053AA68 /* main.m */,
-				BE213D23FE171C97329691C3 /* SortAlgorithms.h */,
-				BE213408492A5CE05F789F73 /* SortAlgorithms.c */,
-				BE21389F463BABE40D69F7E4 /* General.h */,
-				BE213B4F6BDEA389BB85C864 /* General.cpp */,
-				BE21319430CBDD9820616CE5 /* TemplatesMacroses.h */,
 			);
 			path = "Algorithms and Data Structures";
 			sourceTree = "<group>";
@@ -125,8 +113,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE213778B4DDD09C65663426 /* main.m in Sources */,
-				BE213095D31EF08308B509E1 /* SortAlgorithms.c in Sources */,
-				BE21354C18018841B96D677A /* General.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
