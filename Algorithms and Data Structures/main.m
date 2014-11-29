@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/objc-runtime.h>
 
 int main(int argc, const char * argv[]) {
+	unsigned int varCount;
+	Ivar *vars = class_copyIvarList([@(1) class], &varCount);
     return 0;
 }
 
