@@ -9,26 +9,20 @@
 /* Begin PBXBuildFile section */
 		589F2B591A28FEE7000C122E /* ADSLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 589F2B581A28FEE7000C122E /* ADSLib.h */; };
 		589F2B5B1A28FEE7000C122E /* ADSLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 589F2B5A1A28FEE7000C122E /* ADSLib.m */; };
-		589F2B6F1A28FF03000C122E /* libADSLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 589F2B561A28FEE7000C122E /* libADSLib.dylib */; };
 		589F2B711A28FF79000C122E /* ADSArraySortByCountingTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 589F2B701A28FF79000C122E /* ADSArraySortByCountingTestCase.m */; };
 		589F2B721A290FC2000C122E /* NSArray+ADS_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21367BE5913B06631AE9AC /* NSArray+ADS_Sorting.m */; };
 		589F2B731A290FC2000C122E /* NSMutableArray+ADS_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21399678C7A2D27BE2AA6C /* NSMutableArray+ADS_Sorting.m */; };
 		589F2B781A291673000C122E /* libADSLib.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 589F2B561A28FEE7000C122E /* libADSLib.dylib */; };
-		BE2130C0235872FF147164B4 /* NSMutableArray+ADS_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21399678C7A2D27BE2AA6C /* NSMutableArray+ADS_Sorting.m */; };
+		BE2135EA68A92C4BE2743B8A /* libtommath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE213D96544EC37BDBE5B2A5 /* libtommath.a */; };
 		BE21364ECB27D4022DFCE69F /* NSArray+ADS_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213FD9CB92496AE95958A8 /* NSArray+ADS_Search.m */; };
-		BE213778B4DDD09C65663426 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213965BA50A6E44053AA68 /* main.m */; };
+		BE213858A4014060EC6B7961 /* tommath_class.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213DDDEA412C28653E73D3 /* tommath_class.h */; };
 		BE213942EBA18E9332FDBFCF /* ADSArraySearchLinearTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213ED740C65F6257C2376A /* ADSArraySearchLinearTestCase.m */; };
 		BE213B2929AB2A2BE5CDAA46 /* ADSArraySearchBinaryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2131A1F06E700BB73A3A48 /* ADSArraySearchBinaryTestCase.m */; };
+		BE213D68B749954F34F943B7 /* tommath.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213DC06D1ADAC472353288 /* tommath.h */; };
+		BE213F53A491A7EDF0E698D9 /* tommath_superclass.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213EF2795F068A0D3B07AA /* tommath_superclass.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		589F2B6D1A28FEF8000C122E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE2136613AEADC5778E9A91F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 589F2B551A28FEE7000C122E;
-			remoteInfo = ADSLib;
-		};
 		589F2B761A29166F000C122E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE2136613AEADC5778E9A91F /* Project object */;
@@ -37,18 +31,6 @@
 			remoteInfo = ADSLib;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BE213741D6F663DF7234733B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		589F2B561A28FEE7000C122E /* libADSLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libADSLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,11 +41,13 @@
 		589F2B701A28FF79000C122E /* ADSArraySortByCountingTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSArraySortByCountingTestCase.m; sourceTree = "<group>"; };
 		BE213049298364148848C7FA /* NSArray+ADS_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ADS_Sorting.h"; sourceTree = "<group>"; };
 		BE2131A1F06E700BB73A3A48 /* ADSArraySearchBinaryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSArraySearchBinaryTestCase.m; sourceTree = "<group>"; };
-		BE2132AD352B895EDCB4B428 /* Algorithms and Data Structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Algorithms and Data Structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE21367BE5913B06631AE9AC /* NSArray+ADS_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ADS_Sorting.m"; sourceTree = "<group>"; };
-		BE213965BA50A6E44053AA68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE21399678C7A2D27BE2AA6C /* NSMutableArray+ADS_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ADS_Sorting.m"; sourceTree = "<group>"; };
+		BE213D96544EC37BDBE5B2A5 /* libtommath.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtommath.a; sourceTree = "<group>"; };
+		BE213DC06D1ADAC472353288 /* tommath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath.h; sourceTree = "<group>"; };
+		BE213DDDEA412C28653E73D3 /* tommath_class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath_class.h; sourceTree = "<group>"; };
 		BE213ED740C65F6257C2376A /* ADSArraySearchLinearTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSArraySearchLinearTestCase.m; sourceTree = "<group>"; };
+		BE213EF2795F068A0D3B07AA /* tommath_superclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath_superclass.h; sourceTree = "<group>"; };
 		BE213F081B76E121FC84F6B5 /* NSMutableArray+ADS_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ADS_Sorting.h"; sourceTree = "<group>"; };
 		BE213FA094A15D576A371D95 /* NSArray+ADS_Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ADS_Search.h"; sourceTree = "<group>"; };
 		BE213FD9CB92496AE95958A8 /* NSArray+ADS_Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ADS_Search.m"; sourceTree = "<group>"; };
@@ -74,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2135EA68A92C4BE2743B8A /* libtommath.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,14 +67,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				589F2B781A291673000C122E /* libADSLib.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE213DBADFB3411BAD4D44C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				589F2B6F1A28FF03000C122E /* libADSLib.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,26 +113,28 @@
 				589F2B571A28FEE7000C122E /* ADSLib */,
 				589F2B641A28FEE7000C122E /* ADSLibTests */,
 				BE213320C371E068CEE48230 /* Products */,
-				BE213FA7EDE6B7249341F219 /* Algorithms and Data Structures */,
+				BE2136E27C65AFFF3E3828DC /* TomMath Library */,
 			);
 			sourceTree = "<group>";
 		};
 		BE213320C371E068CEE48230 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE2132AD352B895EDCB4B428 /* Algorithms and Data Structures */,
 				589F2B561A28FEE7000C122E /* libADSLib.dylib */,
 				589F2B601A28FEE7000C122E /* ADSLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE213FA7EDE6B7249341F219 /* Algorithms and Data Structures */ = {
+		BE2136E27C65AFFF3E3828DC /* TomMath Library */ = {
 			isa = PBXGroup;
 			children = (
-				BE213965BA50A6E44053AA68 /* main.m */,
+				BE213D96544EC37BDBE5B2A5 /* libtommath.a */,
+				BE213DC06D1ADAC472353288 /* tommath.h */,
+				BE213DDDEA412C28653E73D3 /* tommath_class.h */,
+				BE213EF2795F068A0D3B07AA /* tommath_superclass.h */,
 			);
-			path = "Algorithms and Data Structures";
+			path = "TomMath Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				589F2B591A28FEE7000C122E /* ADSLib.h in Headers */,
+				BE213D68B749954F34F943B7 /* tommath.h in Headers */,
+				BE213858A4014060EC6B7961 /* tommath_class.h in Headers */,
+				BE213F53A491A7EDF0E698D9 /* tommath_superclass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,30 +189,13 @@
 			productReference = 589F2B601A28FEE7000C122E /* ADSLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE213E3214A83F4374D39C22 /* Algorithms and Data Structures */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE213872672B9B7B36148237 /* Build configuration list for PBXNativeTarget "Algorithms and Data Structures" */;
-			buildPhases = (
-				BE213C36D56F21F326B5E456 /* Sources */,
-				BE213DBADFB3411BAD4D44C8 /* Frameworks */,
-				BE213741D6F663DF7234733B /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				589F2B6E1A28FEF8000C122E /* PBXTargetDependency */,
-			);
-			name = "Algorithms and Data Structures";
-			productName = "Algorithms and Data Structures";
-			productReference = BE2132AD352B895EDCB4B428 /* Algorithms and Data Structures */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BE2136613AEADC5778E9A91F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = ASPCartman;
 				TargetAttributes = {
 					589F2B551A28FEE7000C122E = {
@@ -253,7 +218,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE213E3214A83F4374D39C22 /* Algorithms and Data Structures */,
 				589F2B551A28FEE7000C122E /* ADSLib */,
 				589F2B5F1A28FEE7000C122E /* ADSLibTests */,
 			);
@@ -292,23 +256,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE213C36D56F21F326B5E456 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE213778B4DDD09C65663426 /* main.m in Sources */,
-				BE2130C0235872FF147164B4 /* NSMutableArray+ADS_Sorting.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		589F2B6E1A28FEF8000C122E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 589F2B551A28FEE7000C122E /* ADSLib */;
-			targetProxy = 589F2B6D1A28FEF8000C122E /* PBXContainerItemProxy */;
-		};
 		589F2B771A29166F000C122E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 589F2B551A28FEE7000C122E /* ADSLib */;
@@ -320,6 +270,7 @@
 		589F2B671A28FEE7000C122E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
@@ -328,6 +279,7 @@
 					"$(inherited)",
 				);
 				KEEP_PRIVATE_EXTERNS = NO;
+				LIBRARY_SEARCH_PATHS = "./**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -335,10 +287,12 @@
 		589F2B681A28FEE7000C122E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
 				KEEP_PRIVATE_EXTERNS = NO;
+				LIBRARY_SEARCH_PATHS = "./**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -357,6 +311,7 @@
 				);
 				INFOPLIST_FILE = ADSLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/TomMath Library\"/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -371,14 +326,7 @@
 				);
 				INFOPLIST_FILE = ADSLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		BE2131250960B0813F8074E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_C_LANGUAGE_STANDARD = c11;
+				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/TomMath Library\"/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -420,14 +368,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		BE2138FA73A86ACEC542A7E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_C_LANGUAGE_STANDARD = c11;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -482,15 +422,6 @@
 			buildConfigurations = (
 				589F2B691A28FEE7000C122E /* Debug */,
 				589F2B6A1A28FEE7000C122E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE213872672B9B7B36148237 /* Build configuration list for PBXNativeTarget "Algorithms and Data Structures" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE2138FA73A86ACEC542A7E1 /* Debug */,
-				BE2131250960B0813F8074E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
