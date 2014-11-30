@@ -9,6 +9,8 @@
 + (instancetype) queue;
 + (instancetype) threadSafeQueue;
 
+- (void) enableThreadSafety;
+- (void) disableThreadSafety;
 - (void) addObject:(id)object;
 - (id) popObject;
 

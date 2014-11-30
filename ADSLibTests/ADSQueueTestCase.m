@@ -60,7 +60,7 @@
 
 - (void) testFastEnumerationMutable
 {
-	ADSQueue *queue = [ADSQueue threadSafeQueue];
+	ADSQueue *queue = [ADSQueue queue];
 
 	for (id obj in @[@1,@2,@3])
 	{
@@ -79,6 +79,38 @@
 
 	id a = @[@(1),@(2),@(3),@(4)];
 	XCTAssertEqualObjects(result, a);
+	XCTAssertEqual(queue.count, 0);
+}
+
+- (void) testThreadSafety
+{
+	ADSQueue *queue = [ADSQueue new];
+	NSUInteger count = 1000;
+	for (NSUInteger i = 0; i < count; ++i)
+	{
+		[queue addObject:@(i)];
+	}
+	[queue enableThreadSafety];
+	
+	NSMutableArray *result = [NSMutableArray new];
+	dispatch_semaphore_t lock = dispatch_semaphore_create(1);
+	dispatch_group_t group = dispatch_group_create();
+
+	for (NSUInteger i = 0; i < 4; ++i)
+	{
+		dispatch_group_async(group, dispatch_queue_create("Test Queue", DISPATCH_QUEUE_CONCURRENT), ^{
+			for (id object in queue)
+			{
+				dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER);
+				[result addObject:object];
+				dispatch_semaphore_signal(lock);
+			}
+		});
+	}
+
+	dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+
+	XCTAssertEqual(result.count, count);
 	XCTAssertEqual(queue.count, 0);
 }
 @end
