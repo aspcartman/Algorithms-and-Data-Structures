@@ -10,7 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "NSArray+ADS_Sorting.h"
 #import "ADSTomInteger.h"
-#import "ADSQueue.h"
+#import "ADSSerialQueue.h"
 
 #define TEST_SIZE 1000000
 
@@ -28,7 +28,7 @@
 
 - (void) testWorks
 {
-	ADSQueue *queue = [ADSQueue new];
+	ADSSerialQueue *queue = [ADSSerialQueue new];
 	[queue addObject:@0];
 	[queue addObject:@1];
 	for (int i = 0; i <= 1; ++i)
@@ -41,7 +41,7 @@
 
 - (void) testFastEnumeration
 {
-	ADSQueue *queue = [ADSQueue new];
+	ADSSerialQueue *queue = [ADSSerialQueue new];
 
 	NSArray *original = @[@1,@2,@3];
 	for (id obj in original)
@@ -60,7 +60,7 @@
 
 - (void) testFastEnumerationMutable
 {
-	ADSQueue *queue = [ADSQueue queue];
+	ADSSerialQueue *queue = [ADSSerialQueue queue];
 
 	for (id obj in @[@1,@2,@3])
 	{
@@ -84,7 +84,7 @@
 
 - (void) testThreadSafety
 {
-	ADSQueue *queue = [ADSQueue new];
+	ADSSerialQueue *queue = [ADSSerialQueue new];
 	NSUInteger count = 1000;
 	for (NSUInteger i = 0; i < count; ++i)
 	{

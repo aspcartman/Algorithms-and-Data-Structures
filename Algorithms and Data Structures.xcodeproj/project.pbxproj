@@ -18,13 +18,13 @@
 		BE213858A4014060EC6B7961 /* tommath_class.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213DDDEA412C28653E73D3 /* tommath_class.h */; };
 		BE2138F25CF64FED202292ED /* NSArray+ADS_Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213CB0925B03447DB2D651 /* NSArray+ADS_Sorting.m */; };
 		BE213942EBA18E9332FDBFCF /* ADSArraySearchLinearTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213ED740C65F6257C2376A /* ADSArraySearchLinearTestCase.m */; };
-		BE213AD38BD656DBACFA4464 /* ADSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2137F3891C807F68ACA39E /* ADSQueue.m */; };
 		BE213B2929AB2A2BE5CDAA46 /* ADSArraySearchBinaryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2131A1F06E700BB73A3A48 /* ADSArraySearchBinaryTestCase.m */; };
 		BE213C6F9FAEE7F014DCE5D9 /* NSArray+ADS_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21341288526BF65D537913 /* NSArray+ADS_Search.m */; };
 		BE213D68B749954F34F943B7 /* tommath.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213DC06D1ADAC472353288 /* tommath.h */; };
 		BE213DA68CE5948721A2FF09 /* ADSTomInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213F95FE07B9E8638C6A72 /* ADSTomInteger.h */; };
 		BE213F2CA41EE85164C9B99A /* ADSTomInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21300632F2CB53793495BC /* ADSTomInteger.m */; };
 		BE213F53A491A7EDF0E698D9 /* tommath_superclass.h in Headers */ = {isa = PBXBuildFile; fileRef = BE213EF2795F068A0D3B07AA /* tommath_superclass.h */; };
+		BE213FFDDED1987B93AC4ABB /* ADSSerialQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2132CB13408444103A0E17 /* ADSSerialQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +47,14 @@
 		BE21300632F2CB53793495BC /* ADSTomInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSTomInteger.m; sourceTree = "<group>"; };
 		BE21309E3AF4CAC724A45C7F /* NSMutableArray+ADS_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ADS_Sorting.h"; sourceTree = "<group>"; };
 		BE2130AFE4A4C39F3DD81C1C /* ADSQueueTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSQueueTestCase.m; sourceTree = "<group>"; };
-		BE2130F1905FE630F70C67BB /* ADSQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSQueue.h; sourceTree = "<group>"; };
 		BE2131A1F06E700BB73A3A48 /* ADSArraySearchBinaryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSArraySearchBinaryTestCase.m; sourceTree = "<group>"; };
 		BE2131C7FE7AF0D728BEF64F /* NSArray+ADS_Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ADS_Sorting.h"; sourceTree = "<group>"; };
+		BE2132CB13408444103A0E17 /* ADSSerialQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSSerialQueue.m; sourceTree = "<group>"; };
 		BE21341288526BF65D537913 /* NSArray+ADS_Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ADS_Search.m"; sourceTree = "<group>"; };
 		BE2134DFADB93191BD22A1DC /* NSArray+ADS_Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ADS_Search.h"; sourceTree = "<group>"; };
 		BE21360B6EC9676BC44E5223 /* ADSTomIntegerTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSTomIntegerTestCase.m; sourceTree = "<group>"; };
 		BE21364E471401A73D3F4C59 /* NSMutableArray+ADS_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ADS_Sorting.m"; sourceTree = "<group>"; };
-		BE2137F3891C807F68ACA39E /* ADSQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSQueue.m; sourceTree = "<group>"; };
+		BE213A3A1254A53D2356FD5B /* ADSSerialQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSSerialQueue.h; sourceTree = "<group>"; };
 		BE213CB0925B03447DB2D651 /* NSArray+ADS_Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ADS_Sorting.m"; sourceTree = "<group>"; };
 		BE213D96544EC37BDBE5B2A5 /* libtommath.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtommath.a; sourceTree = "<group>"; };
 		BE213DC06D1ADAC472353288 /* tommath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tommath.h; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				BE213B4F85A45C7A2ADEB251 /* Long Arithmetic */,
-				BE2137F3891C807F68ACA39E /* ADSQueue.m */,
-				BE2130F1905FE630F70C67BB /* ADSQueue.h */,
+				BE2132CB13408444103A0E17 /* ADSSerialQueue.m */,
+				BE213A3A1254A53D2356FD5B /* ADSSerialQueue.h */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -286,6 +286,7 @@
 				BE2138F25CF64FED202292ED /* NSArray+ADS_Sorting.m in Sources */,
 				BE21372867FB44A3D5F0E22E /* NSMutableArray+ADS_Sorting.m in Sources */,
 				BE213F2CA41EE85164C9B99A /* ADSTomInteger.m in Sources */,
+				BE213FFDDED1987B93AC4ABB /* ADSSerialQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +298,6 @@
 				BE213942EBA18E9332FDBFCF /* ADSArraySearchLinearTestCase.m in Sources */,
 				BE213B2929AB2A2BE5CDAA46 /* ADSArraySearchBinaryTestCase.m in Sources */,
 				BE21366DAA3A72F3A595C4D8 /* ADSTomIntegerTestCase.m in Sources */,
-				BE213AD38BD656DBACFA4464 /* ADSQueue.m in Sources */,
 				BE213135EF984D5F8E71F1B0 /* ADSQueueTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

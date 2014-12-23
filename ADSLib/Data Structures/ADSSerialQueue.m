@@ -3,111 +3,30 @@
 // Copyright (c) 2014 ASPCartman. All rights reserved.
 //
 
-#import "ADSQueue.h"
+#import "ADSSerialQueue.h"
 #import "objc/runtime.h"
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
-@class ADSQueue_NotThreadSafe;
 
-@interface ADSQueue_NotThreadSafe : ADSQueue
-{
-@package
-	__strong NSMutableArray *_contents;
-}
+@interface ADSQueue_ThreadSafe : ADSSerialQueue
 @end
 
-@interface ADSQueue_ThreadSafe : ADSQueue
+@implementation ADSSerialQueue
 {
 @package
 	__strong NSMutableArray *_contents;
 	dispatch_semaphore_t    _sema;
 }
-@end
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-noreturn"
-
-static inline void classClusterAssert() __attribute__((noreturn))
-{
-	NSCAssert(0, @"This is a class cluster.");
-}
-
-#pragma clang diagnostic pop
-
-@implementation ADSQueue
-{
-}
-+ (instancetype) alloc
-{
-	Class c = [self class];
-	id ptr = class_getInstanceSize([ADSQueue_NotThreadSafe class]) > class_getInstanceSize([ADSQueue_ThreadSafe class]) ? [ADSQueue_NotThreadSafe allocWithZone:NSDefaultMallocZone()] : [ADSQueue_ThreadSafe allocWithZone:NSDefaultMallocZone()];
-	object_setClass(ptr, c);
-	return ptr;
-}
-
-+ (instancetype) new
-{
-	return [self queue];
-}
-
-+ (ADSQueue *) queue
-{
-	return [ADSQueue_NotThreadSafe new];
-}
-
-+ (ADSQueue *) threadSafeQueue
-{
-	return [ADSQueue_ThreadSafe new];
-}
-
-- (instancetype) init
-{
-	NSAssert(self.class != [ADSQueue class], @"This is a class cluster, call designated factory methods instead.");
-	return self = [super init];
-}
-
-- (void) enableThreadSafety
-{
-	classClusterAssert();
-}
-
-- (void) disableThreadSafety
-{
-	classClusterAssert();
-}
-
-- (void) addObject:(id)object
-{
-	classClusterAssert();
-}
-
-- (id) popObject
-{
-	classClusterAssert();
-}
-
-- (NSUInteger) count
-{
-	classClusterAssert();
-}
-
-- (id) objectAtIndexedSubscript:(NSUInteger)i
-{
-	classClusterAssert();
-}
-
-- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
-{
-	classClusterAssert();
-}
-@end
-
-@implementation ADSQueue_NotThreadSafe
-
-+ (instancetype) new
++ (ADSSerialQueue *) queue
 {
 	return [[self alloc] init];
+}
+
++ (ADSSerialQueue *) threadSafeQueue
+{
+	return [ADSQueue_ThreadSafe new];
 }
 
 - (instancetype) init
@@ -121,16 +40,12 @@ static inline void classClusterAssert() __attribute__((noreturn))
 	return self;
 }
 
+
 - (void) enableThreadSafety
 {
-	id contents = _contents;
-
-	_contents = nil;
-
 	object_setClass(self, [ADSQueue_ThreadSafe class]);
-	ADSQueue_ThreadSafe *castedPtr = (id) self;
 
-	castedPtr->_contents = contents;
+	ADSQueue_ThreadSafe *castedPtr = (id) self;
 	castedPtr->_sema = dispatch_semaphore_create(1);
 }
 
@@ -156,11 +71,6 @@ static inline void classClusterAssert() __attribute__((noreturn))
 	return _contents.count;
 }
 
-- (id) objectAtIndexedSubscript:(NSUInteger)i
-{
-	return _contents[i];
-}
-
 - (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
 {
 	state->state        = 1;
@@ -184,6 +94,7 @@ static inline void classClusterAssert() __attribute__((noreturn))
 	return (NSUInteger) itemsForThisIteration;
 }
 @end
+
 
 @implementation ADSQueue_ThreadSafe
 
@@ -211,15 +122,8 @@ static inline void classClusterAssert() __attribute__((noreturn))
 
 - (void) disableThreadSafety
 {
-	id contents = _contents;
-
-	_contents = nil;
 	_sema = nil;
-
-	object_setClass(self, [ADSQueue_NotThreadSafe class]);
-	ADSQueue_NotThreadSafe *castedPtr = (id) self;
-
-	castedPtr->_contents = contents;
+	object_setClass(self, [ADSSerialQueue class]);
 }
 
 static inline void lock(dispatch_semaphore_t sema)
@@ -259,13 +163,6 @@ static inline void unlock(dispatch_semaphore_t sema)
 	return count;
 }
 
-- (id) objectAtIndexedSubscript:(NSUInteger)i
-{
-	lock(_sema);
-	id object = _contents[i];
-	unlock(_sema);
-	return object;
-}
 
 - (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
 {

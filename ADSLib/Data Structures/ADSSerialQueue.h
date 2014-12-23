@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ADSQueue : NSObject <NSFastEnumeration>
+@interface ADSSerialQueue : NSObject <NSFastEnumeration>
 + (instancetype) queue;
 + (instancetype) threadSafeQueue;
 
@@ -15,6 +15,5 @@
 - (id) popObject;
 
 - (NSUInteger) count;
-- (id) objectAtIndexedSubscript:(NSUInteger)i;
 - (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len;
 @end
