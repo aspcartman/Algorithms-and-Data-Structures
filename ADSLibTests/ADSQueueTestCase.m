@@ -29,8 +29,8 @@
 - (void) testWorks
 {
 	ADSSerialQueue *queue = [ADSSerialQueue new];
-	[queue addObject:@0];
-	[queue addObject:@1];
+	[queue pushObject:@0];
+	[queue pushObject:@1];
 	for (int i = 0; i <= 1; ++i)
 	{
 		id obj = [queue popObject];
@@ -46,7 +46,7 @@
 	NSArray *original = @[@1,@2,@3];
 	for (id obj in original)
 	{
-		[queue addObject:obj];
+		[queue pushObject:obj];
 	}
 
 	NSMutableArray *result = [NSMutableArray new];
@@ -64,7 +64,7 @@
 
 	for (id obj in @[@1,@2,@3])
 	{
-		[queue addObject:obj];
+		[queue pushObject:obj];
 	}
 
 	NSMutableArray *result = [NSMutableArray new];
@@ -73,7 +73,7 @@
 		[result addObject:obj];
 		if ([obj isEqualToNumber:@3])
 		{
-			[queue addObject:@4];
+			[queue pushObject:@4];
 		}
 	}
 
@@ -88,7 +88,7 @@
 	NSUInteger count = 1000;
 	for (NSUInteger i = 0; i < count; ++i)
 	{
-		[queue addObject:@(i)];
+		[queue pushObject:@(i)];
 	}
 	[queue enableThreadSafety];
 	

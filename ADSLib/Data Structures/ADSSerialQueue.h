@@ -11,7 +11,7 @@
 
 - (void) enableThreadSafety;
 - (void) disableThreadSafety;
-- (void) addObject:(id)object;
+- (void) pushObject:(id)object;
 - (id) popObject;
 
 - (NSUInteger) count;

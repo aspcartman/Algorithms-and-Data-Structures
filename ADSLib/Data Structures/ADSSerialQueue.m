@@ -54,7 +54,7 @@
 	return;
 }
 
-- (void) addObject:(id)object
+- (void) pushObject:(id)object
 {
 	[_contents addObject:object];
 }
@@ -136,7 +136,7 @@ static inline void unlock(dispatch_semaphore_t sema)
 	dispatch_semaphore_signal(sema);
 }
 
-- (void) addObject:(id)object
+- (void) pushObject:(id)object
 {
 	lock(_sema);
 	[_contents addObject:object];
